@@ -17,18 +17,19 @@ export const Nav = styled.nav`
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
     }
-`
-export const NavigationBarContainer = styled.div`
+`;
+
+export const NavbarContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 80px;
     z-index: 1;
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
-`
+`;
 
-export const NavigationLogo = styled(LinkRouter)`
+export const NavLogo = styled(LinkRouter)`
     color: #fff;
     justify-self: flex-start;
     cursor: pointer;
@@ -52,4 +53,34 @@ export const MobileIcon = styled.div`
         font-size: 1.8rem;
         cursor: pointer;
     }
-`
+`;
+
+export const NavMenu = styled.ul`
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    margin-right: -22px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`;
+
+export const NavItem = styled.li`
+    height: 80px;
+`;
+
+export const NavLinks = styled(LinkScroll)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+
+    &.active {
+        border-bottom: 3px solid #01bf71;
+    }
+`;
