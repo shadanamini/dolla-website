@@ -36,7 +36,7 @@ export const NavLogo = styled(LinkRouter)`
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    margin-left: 0;
+    margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
 `;
@@ -49,9 +49,10 @@ export const MobileIcon = styled.div`
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%)
+        transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
+        color: #fff;
     }
 `;
 
@@ -84,3 +85,32 @@ export const NavLinks = styled(LinkScroll)`
         border-bottom: 3px solid #01bf71;
     }
 `;
+
+export const NavBtn = styled.nav`
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+`
+
+export const NavBtnLink = styled(LinkRouter)`
+    border-radius: 50px;
+    background: #01bf71;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #010606;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    translation: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &.hover {
+        transition: all 0.2s ease-in-out;
+        background: #fff;
+        color: #010606;
+    }
+`
